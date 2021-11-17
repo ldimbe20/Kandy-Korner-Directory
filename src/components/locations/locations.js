@@ -22,7 +22,7 @@ export const LocationList = () => {
     return (
         <>
             <div>
-                <h2>Locations </h2>
+                <h2>Locations</h2>
             </div>
             {
                 locations.map(

@@ -9,7 +9,7 @@ export const ProductList = () => {//productList is a componant
 
     useEffect( //useEffect is a hook that reacts to changes in state
         () => {
-            fetch("http://localhost:8088/products?_expand=productType")
+            fetch("http://localhost:8088/products?_expand=productType&_sort=productTypeId&_order=asc")
                 .then(res => res.json())
                 .then((data) => {
                     setProducts(data) 

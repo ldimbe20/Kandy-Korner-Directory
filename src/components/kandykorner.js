@@ -1,6 +1,5 @@
 
-import { LocationList } from "./locations/locations"
-import { ProductList } from "./productlist/productlist"
+import {ApplicationViews} from "./ApplicationViews"
 
 
 //what state do I want this componant to render
@@ -10,16 +9,13 @@ export const KandyKorner = () => {
     return (
     <>
         
-        <h1>Service Tickets</h1>
-        <LocationList />
-        <h1>Candy Types</h1>
-        <ProductList />
-
-
-       
+        <h2>Kandy Korner</h2>
+        <ApplicationViews />
+        
+     
     </>
 
     )
 } 
 
-// the return of this function is html code or JSX 
+// the return of this function is in JSX code which allows us to write HTML directly
