@@ -30,7 +30,7 @@ export const ProductList = () => {//productList is a componant
 
                         return <div key={`product--${product.id}`}>
                             <p> {product.name} cost ${product?.price} 
-                            {/* Optional Chaining the ? above asks does this have customer if it does then move to name  */}
+                            {/* Optional Chaining the ? above asks does this have product if it does then move to name  */}
                               they are a {product.productType?.type||"Unknown" } type of candy</p>  
                              {/* Two vertical pipes means is there product.employee.name if not then post "unknown"  */}
                             
