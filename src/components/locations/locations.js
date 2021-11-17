@@ -8,7 +8,7 @@ export const LocationList = () => {
 
     useEffect(
         () => {
-            fetch("http://localhost:8088/location")
+            fetch("http://localhost:8088/locations")
                 .then(res => res.json())
                 .then((data) => {
                     setLocation(data)
