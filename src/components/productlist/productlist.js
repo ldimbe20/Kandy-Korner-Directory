@@ -22,6 +22,9 @@ export const ProductList = () => {//productList is a componant
 
     return (
         <>
+        <div>
+                <h2>Products</h2>
+         </div>
             {
                 products.map(
                     (product) => {
