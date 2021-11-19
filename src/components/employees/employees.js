@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react"
+import { useHistory } from "react-router-dom"
 
 
 
 export const EmployeeList = () => {
     const [employees, setEmployee] = useState([]) //useState is hook that is a placeholder for state
     //employee is an variable setEmployee is a variable whose functions will set state for employees if invoked
+    const history = useHistory()
+    
     useEffect(
         () => {
             fetch("http://localhost:8088/employees")
@@ -20,6 +23,10 @@ export const EmployeeList = () => {
 
     return (
         <>
+         <div>
+         <button onClick={() => history.push("/employees/create")}>Pick Employee</button>
+        </div> 
+            
             <div>
                 <h2>Employees</h2>
             </div>
