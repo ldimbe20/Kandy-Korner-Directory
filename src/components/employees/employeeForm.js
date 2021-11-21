@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 
 export const EmployeeForm = () => {
     
-    const [employee, update] = useState({ 
+    const [employee, update] = useState({  //useState will be an object below are placeholders that will be filled in when update is invoked
         name:"",
         location:"", 
         manager:true,
