@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react"
+import { useHistory } from "react-router-dom"
 
 
 export const ProductList = () => {//productList is a componant
     const [products, setProducts] = useState([])//useState-is responsible for setting up a place to store state
     //products is a variable that sets state 
     //setProducts is a variable whose function changes state
+
+    const history = useHistory()
 
 
     useEffect( //useEffect is a hook that reacts to changes in state
@@ -22,6 +25,8 @@ export const ProductList = () => {//productList is a componant
 
     return (
         <>
+
+        
         
         <div>
                 <h2>Products</h2>
@@ -37,7 +42,10 @@ export const ProductList = () => {//productList is a componant
                             {/* Optional Chaining the ? above asks does this have product if it does then move to name  */}
                               they are a {product.productType?.type||"Unknown" } type of candy</p>  
                              {/* Two vertical pipes means is there product.employee.name if not then post "unknown"  */}
-                            
+                              <div>
+                               <button onClick={() => history.push("/products/create")}>Pick Candy</button> 
+                              {/* once this button is clicked, or the rendered version below is clicked, it will bring you to the EmployeeForm on applicationsviews. */}
+                             </div> 
                             </div>
                     }
                 )

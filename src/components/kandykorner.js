@@ -1,22 +1,34 @@
 
-import {ApplicationViews} from "./ApplicationViews"
-import { NavBar } from "./nav/NavBar"
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { ApplicationViews } from "./ApplicationViews";
+import { NavBar } from "./nav/NavBar";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
 
 
-//what state do I want this componant to render
+export const KandyKorner = () => (
+  <>
+    <Route
+      render={() => {
+        if (localStorage.getItem("kandy_customer")) {
+          return (
+            <>
+              <NavBar />
+              <ApplicationViews />
+            </>
+          );
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
 
-export const KandyKorner = () => { 
-
-    return (
-    <>
-        <NavBar />
-        <h2>Kandy Korner</h2>
-        <ApplicationViews />
-        
-     
-    </>
-
-    )
-} 
-
-// the return of this function is in JSX code which allows us to write HTML directly in react
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+  </>
+);

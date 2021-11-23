@@ -5,7 +5,8 @@ import { ProductList } from "./productlist/productlist"
 import { EmployeeList } from "./employees/employees"
 import { EmployeeForm } from "./employees/employeeForm"
 import { CustomerList } from "./customers/customers"
-// import { ProductList } from "./productlist/productlist"
+import { PurchaseForm } from "./purchases/purchases"
+
 
 export const ApplicationViews = () => {
     return (
@@ -14,7 +15,7 @@ export const ApplicationViews = () => {
                 <LocationList />
             </Route>
 
-            <Route path="/products">
+            <Route exact path="/products">
                 <ProductList />
             </Route>
 
@@ -22,13 +23,22 @@ export const ApplicationViews = () => {
                 <EmployeeList />
             </Route>
 
-            <Route path="/employees/create">
-                <EmployeeForm />
-            </Route>
-
+        
             <Route path="/customers">
                 <CustomerList />
             </Route>
+
+            <Route path="/employees/create"> 
+            {/* once employee is clicked on employee.js it brings you to employeeform */}
+                <EmployeeForm />
+            </Route>
+
+            <Route path="/products/create"> 
+            {/* once employee is clicked on employee.js it brings you to employeeform */}
+                <PurchaseForm />
+            </Route>
+
+            
 
 
     

@@ -24,7 +24,8 @@ export const EmployeeList = () => {
     return (
         <>
          <div>
-         <button onClick={() => history.push("/employees/create")}>Pick Employee</button>
+         <button onClick={() => history.push("/employees/create")}>Pick Employee</button> 
+         {/* once this button is clicked, or the rendered version below is clicked, it will bring you to the EmployeeForm on applicationsviews. */}
         </div> 
             
             <div>
